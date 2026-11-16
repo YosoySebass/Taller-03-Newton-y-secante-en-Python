@@ -28,7 +28,7 @@ def secante(f, p0, p1, TOL=1e-6, N0=50):
         p1, q1 = p, f(p)
 
     # Paso 7: lance un RuntimeError si se agotan las iteraciones
-    raise RuntimeError(f"El método fracasó después de {N0} iteraciones")
+    raise RuntimeError(f"El metodo fracaso despues de {N0} iteraciones")
 
 
 def saldo_final(i, monto=20000.0, cuota=450.0, meses=60):
