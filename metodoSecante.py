@@ -10,7 +10,7 @@ def secante(f, p0, p1, TOL=1e-6, N0=50):
     while i <= N0:
         # Si q1 == q0, la secante es horizontal: lance un ZeroDivisionError con un mensaje claro.
         if q1 == q0:
-            raise ZeroDivisionError(f"q1 == q0 en p1={p1} y p0={p0}: la secante es horizontal (división por cero).")
+            raise ZeroDivisionError(f"q1 == q0 en p1={p1} y p0={p0}: la secante es horizontal (es division por cero).")
 
         # Paso 3: calcule p y agréguelo a la historia. (Nota el operador * de multiplicación)
         p = p1 - q1 * (p1 - p0) / (q1 - q0)
@@ -28,7 +28,7 @@ def secante(f, p0, p1, TOL=1e-6, N0=50):
         p1, q1 = p, f(p)
 
     # Paso 7: lance un RuntimeError si se agotan las iteraciones
-    raise RuntimeError(f"El método fracasó después de {N0} iteraciones")
+    raise RuntimeError(f"El metodo fracaso despues de {N0} iteraciones")
 
 
 llamadas = []            # cada evaluación de f agrega aquí su x
